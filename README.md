@@ -12,7 +12,7 @@
 
 В папке templates содержаться шаблоны html страниц.
 
-# Изучения кода нужно начинать с 
+# Изучение кода нужно начинать с 
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy/urls.py он содержит роутинг запросов;
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/PresentationLayer/views.py он содержит обработчики запросов (presentation layer);
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/PresentationLayer/forms.py он содержит обработчик формы на поиск имени (presentation layer);
