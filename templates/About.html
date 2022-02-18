@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta charset="UTF-8">
+    <title>О разработчике сайта</title>
+    <META NAME="keywords" CONTENT="hCard разработчик сайт www.svyatsy.site">
+    <META NAME="description" CONTENT="Данные о разработчике сайта www.svyatsy.site в формате hCard">
+</head>
+<body>
+
+{% include "ceiling.html" %}
+
+<br>
+<br>
+
+Сайт позволяет выбрать имя два вашего ребенка согласно православному календарю.
+<br>
+<br>
+
+<div class="vcard">
+    <div>
+        <span class="category">Web разработчик</span>
+        <span class="fn">Нарваев-Иванов И. В.</span>
+    </div>
+    <div class="adr">
+        <span class="locality">г. Омск</span>,
+        <span class="street-address">улица Ленина, дом 1, квартира 1</span>
+    </div>
+    <div>Телефон: <span class="tel">+7 (123) 123-45-67</span></div>
+    <span class="url">
+     <span class="value-title" title="http://www.svyatsy.site"> </span>
+   </span>
+</div>
+<div>Email: <span class="email">webmaster@svyatsy.site</span></div>
+
+</body>
+</html>

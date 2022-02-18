@@ -1,0 +1,52 @@
+@import '../fonts/HeinrichText/stylesheet.css';
+
+w-nav-top {
+    background: linear-gradient(to bottom, #94C2FF, #ACD8FE);
+}
+
+.w-nav-top .row-fluid {
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0 20px;
+}
+
+#nav {
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+.w-nav-top .row-fluid {
+    background: url('../img/bg_cloud-1.jpg') left top no-repeat;
+    background-size: cover;
+}
+
+.site-caption {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    font-family: 'Heinrich Text';
+    font-weight: normal;
+    font-style: normal;
+    align-content: baseline;
+}
+
+TABLE {
+    border-collapse: collapse;
+}
+
+TD, TH {
+    padding: 3px;
+    border: 1px solid black;
+}
+
+TH {
+    background: #ACD8FE;
+}
+
+.links_in_menu {
+    #font-weight: bold;
+}
+
+
+

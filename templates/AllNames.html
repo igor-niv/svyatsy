@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta charset="UTF-8">
+    <title>Полный список имен святых</title>
+    <META NAME="keywords" CONTENT="имена святые святцы мыслеслов">
+    <META NAME="description" CONTENT="Полный список имен святых (святцы)">
+</head>
+<body>
+
+{% include "ceiling.html" %}
+
+<h1 style="text-align: center">Полный список имен по церковному календарю (святцы)</h1>
+<br>
+
+{% for allNamesByMonth in allNamesByMonthsViewModel %}
+    <br>
+    <table style="width: 100%">
+        <tr>
+            <th style="padding-top:0;padding-bottom:0">
+                <h3 style="text-align: center"> {{ allNamesByMonth.month }} </h3>
+            </th>
+        </tr>
+    </table>
+    <table style="margin-top: 5px; width: 100%">
+        <tr>
+            <th style="width: 50px">День</th>
+            <th>Имена</th>
+        </tr>
+        {% for date, names in allNamesByMonth.dates2Names.items %}
+            <tr>
+                <td> {{ date }} </td>
+                <td>
+                    {% autoescape off %}
+                        {{ names }}
+                    {% endautoescape %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endfor %}
+
+</body>
+</html>

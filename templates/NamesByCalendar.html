@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Календарь имен святых</title></title>
+     <META NAME="keywords" CONTENT="имена святые святцы календарь">
+    <META NAME="description" CONTENT="Календарь имен святых">
+</head>
+<body>
+
+{% include "ceiling.html" %}
+
+<br>
+<br>
+<table cellspacing=1 cellpadding=3 width=820 border=0 align="center">
+    <tr>
+        <td align="center">
+                                                <span>
+                                                    <a href="0">Январь</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="1">Февраль</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="2">Март</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="3">Апрель</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="4">Май</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="5">Июнь</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="6">Июль</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="7">Август</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="8">Сентябрь</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="9">Октябрь</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="10">Ноябрь</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="11">Декабрь</a>
+                                                </span>
+        </td>
+    </tr>
+</table>
+
+
+{% if namesByMonthViewModel.men|length > 0 %}
+    <br>
+    <br>
+    <H2 style="text-align: center">Мужские имена ({{ namesByMonthViewModel.month }})</H2>
+    <br>
+{% endif %}
+
+<table style="width: 100%">
+    <tr>
+        <th>День</th>
+        <th>Имя и его значение</th>
+    </tr>
+    {% for manName in namesByMonthViewModel.men %}
+        <tr>
+            <td style="width: 50px">{{ manName.day }}</td>
+            <td><strong>{{ manName.name }}</strong> - {{ manName.descr }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% if namesByMonthViewModel.women|length > 0 %}
+    <br>
+    <br>
+    <H2 style="text-align: center">Женские имена ({{ namesByMonthViewModel.month }})</H2>
+    <br>
+{% endif %}
+
+<table style="width: 100%">
+    <tr>
+        <th>День</th>
+        <th>Имя и его значение</th>
+    </tr>
+    {% for womanName in namesByMonthViewModel.women %}
+        <tr>
+            <td style="width: 50px">{{ womanName.day }}</td>
+            <td><strong>{{ womanName.name }}</strong> - {{ womanName.descr }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

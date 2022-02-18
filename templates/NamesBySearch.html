@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Поиск имен святых</title>
+    <META NAME="keywords" CONTENT="имена святые святцы поиск">
+    <META NAME="description" CONTENT="Поиск имен святых">
+</head>
+<body>
+
+{% include "ceiling.html" %}
+
+<br>
+<br>
+
+{% if isEmptySearch %}
+
+    <H2>Вы не ввели имя для поиска</H2>
+
+{% else %}
+
+    <h2><font style="color: darkgrey;">Результат поиска </font>'{{ namesViewModel.searchQueryStr }}'</h2>
+
+    {% if isFound == False %}
+        <H3>По вашему запросу ничего не найдено</H3>
+
+    {% else %}
+
+        {% if namesViewModel.men|length > 0 %}
+            <br>
+            <br>
+            <H2 style="text-align: center">Мужские имена</H2>
+            <br>
+        {% endif %}
+
+        {% for manName in namesViewModel.men %}
+            <strong>{{ manName.name }}</strong> - {{ manName.descr }}
+            <strong>({{ manName.month }}, {{ manName.day }})</strong>.
+            <br>
+        {% endfor %}
+
+        {% if namesViewModel.women|length > 0 %}
+            <br>
+            <br>
+            <H2 style="text-align: center">Женские имена</H2>
+            <br>
+        {% endif %}
+
+        {% for womanName in namesViewModel.women %}
+            <strong>{{ womanName.name }}</strong> - {{ womanName.descr }}
+            <strong>({{ womanName.month }}, {{ womanName.day }})</strong>.<br>
+        {% endfor %}
+
+    {% endif %}
+{% endif %}
+
+</body>
+</html>

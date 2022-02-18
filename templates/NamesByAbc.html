@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Имена святых по первой букве</title>
+    <META NAME="keywords" CONTENT="имена святые святцы алфавитный порядок">
+    <META NAME="description" CONTENT="Поиск имен святых по первой букве">
+</head>
+<body>
+
+{% include "ceiling.html" %}
+
+<br>
+<br>
+<table cellspacing=1 cellpadding=3 width=820 border=0 align="center">
+    <tr>
+        <td align="center">
+                                                <span>
+                                                    <a href="a">А</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="b">Б</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="v">В</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="g">Г</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="d">Д</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="e">Е</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="z">З</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="i">И</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="k">К</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="l">Л</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="m">М</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="n">Н</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="o">О</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="p">П</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="r">Р</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="s">С</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="t">Т</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="u">У</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="f">Ф</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="x">Х</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="yu">Ю</a>
+                                                </span>
+        </td>
+        <td align="center">
+                                                <span>
+                                                    <a href="ya">Я</a>
+                                                </span>
+        </td>
+    </tr>
+</table>
+
+
+{% if namesByAbcViewModel.men|length > 0 %}
+    <br>
+    <br>
+    <H2 style="text-align: center">Мужские имена (на букву '{{ namesByAbcViewModel.firstLetterRu }}')</H2>
+    <br>
+{% endif %}
+
+{% for manName in namesByAbcViewModel.men %}
+    <strong>{{ manName.name }}</strong> - {{ manName.descr }} <strong>({{ manName.month }}, {{ manName.day }})</strong>.
+    <br>
+{% endfor %}
+
+{% if namesByAbcViewModel.women|length > 0 %}
+    <br>
+    <br>
+    <H2 style="text-align: center">Женские имена (на букву '{{ namesByAbcViewModel.firstLetterRu }}')</H2>
+    <br>
+{% endif %}
+
+{% for womanName in namesByAbcViewModel.women %}
+    <strong>{{ womanName.name }}</strong> - {{ womanName.descr }}
+    <strong>({{ womanName.month }}, {{ womanName.day }})</strong>.<br>
+{% endfor %}
+
+
+</body>
+</html>
