@@ -20,6 +20,8 @@
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/models.py он содержит объектную модеь БД  (data access layer);
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/db_service.py он содержит простой DAO класс (data access layer).
 
+В данных файлах присутствуют комментарии на русском.
+
 # Примечания
 * Реализован человека-читаемый URL через роутинг запросов;
 * Включение подвала и чердака в HTML коде реализовано через директивы сервера (код в отдаче будет представлять единую HTML страницу);
