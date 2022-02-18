@@ -3,16 +3,7 @@
 Исходный код сайта www.svyatsy.site
 
 Сайт разработан на языке Python с использованием веб-фреймворка Django.
-Проект можно открыть в PyCharm Professional Edition (нужные файлы присутствуют в репозитории).
 Сайт хостится на платформе DigitalOcean (виртуальная машина с Ubuntu 20.04 / Django 3.2 / Gunicorn 'Green Unicorn' / Nginx).
-
-Сайст состоит из одного "приложения" (по терминологии Django), которое расположено в папке svyatsy_main.
-В данной папке важны следующие подпапки:
-* BusinessLayer - бизнес логика сайта;
-* DatabaseLayer - уровень доступа к данным (в качестве хранилища используется БД SQLite), SQL команды для заполнения базы можно найти в файле data.sql;
-* PresentationLayer - содержит "котроллеры", которые непосредственно взаимодейтствуют с графическим интерфейсом сайта.
-
-В папке templates содержаться шаблоны html страниц.
 
 # Изучение кода можно начинать с 
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy/urls.py он содержит роутинг запросов;
@@ -20,7 +11,8 @@
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/PresentationLayer/forms.py он содержит обработчик формы на поиск имени (presentation layer);
 * четырех файлов interactors в папке https://github.com/igor-niv/svyatsy/tree/main/svyatsy_main/BusinessLayer они содержат код бизнес логики по обработки данных (business logic layer);
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/models.py он содержит объектную модеь БД  (data access layer);
-* файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/db_service.py он содержит простой DAO класс (data access layer).
+* файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/db_service.py он содержит простой DAO класс (data access layer);
+* папки https://github.com/igor-niv/svyatsy/tree/main/templates она содержит html шаблоны сайта.
 
 В данных файлах присутствуют комментарии на русском.
 
