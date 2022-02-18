@@ -1,6 +1,8 @@
 from svyatsy_main.DatabaseLayer.db_service import DbSvyatsyService, engLetterToRusLetterInUrl
 
+#  Получение имен, начинающихся на заданную букву
 
+# Модель содержит одно имя и информацию о нем
 class NameByAbcViewModel:
     def __init__(self, name, descr, month, day):
         self.name = name
@@ -8,6 +10,7 @@ class NameByAbcViewModel:
         self.month = month
         self.day = day
 
+# Модель содержит мужские и женские имена
 class NamesByAbcViewModel:
     def __init__(self):
         self.firstLetterRu = str()
@@ -15,9 +18,11 @@ class NamesByAbcViewModel:
         self.women = list()
 
 class GetNamesByAbcInteractor:
+    #  Получение имен, начинающихся на заданную букву
     @staticmethod
     def getNamesByFirstLetter(firstLetterEng: str):
         namesByAbcViewModel = NamesByAbcViewModel()
+        # мы получаем в URL английскую букву (или две, например для Ю: yu), нужно преобразовать в одну русскую
         if firstLetterEng in engLetterToRusLetterInUrl.keys():
             firstLetterRu = engLetterToRusLetterInUrl[firstLetterEng]
         else:

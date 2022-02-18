@@ -16,6 +16,7 @@ daysInMonth = {'январь': 31,
                'ноябрь': 30,
                'декабрь': 31}
 
+# маппинг английской буквы в URL (последний компонент пути, см. views.py метод namesByAbc(request)) на русскую
 engLetterToRusLetterInUrl = {
     'a': 'А',
     'b': 'Б',
@@ -41,19 +42,23 @@ engLetterToRusLetterInUrl = {
     'ya': 'Я'
 }
 
+# Класс для доступа к БД
 class DbSvyatsyService:
     @staticmethod
     def getRecordsByMonth(month: str):
+        # поиск имен святых, рожденных в определенном месяце, сортировка результата по дате
         svyatsyByMonth = Svyatsy.objects.filter(month=month).order_by('day')
         return svyatsyByMonth
 
     @staticmethod
     def getAllRecords():
+        # получение всех имен святых, сортировка результата по имени
         svyatsy = Svyatsy.objects.all().order_by('name')
         return svyatsy
 
     @staticmethod
     def searchByName(name: str):
+        # поиск имен святых по имени, сортировка результата по имени
         svyatsyByName = Svyatsy.objects.filter(name=name).order_by('name')
         return svyatsyByName
 

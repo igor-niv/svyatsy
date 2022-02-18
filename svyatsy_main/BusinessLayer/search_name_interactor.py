@@ -1,6 +1,8 @@
 from svyatsy_main.DatabaseLayer.db_service import DbSvyatsyService, engLetterToRusLetterInUrl
 
+# Поиск по имени через форму поиска на сайте
 
+# Модель содержит одно имя и информацию о нем
 class NameViewModel:
     def __init__(self, name, descr, month, day):
         self.name = name
@@ -9,6 +11,7 @@ class NameViewModel:
         self.day = day
 
 
+# Модель содержит мужские и женские имена
 class NamesViewModel:
     def __init__(self):
         self.searchQueryStr = str
@@ -18,8 +21,8 @@ class NamesViewModel:
     def isEmpty(self):
         return len(self.men) == 0 and len(self.women) == 0
 
-
 class SearchNameInteractor:
+    # Поиск имен по заданной строке
     @staticmethod
     def searchNames(searchQueryStr: str):
         namesViewModel = NamesViewModel()
