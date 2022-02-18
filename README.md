@@ -9,7 +9,7 @@
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy/urls.py он содержит роутинг запросов;
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/PresentationLayer/views.py он содержит обработчики запросов (presentation layer);
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/PresentationLayer/forms.py он содержит обработчик формы на поиск имени (presentation layer);
-* четырех файлов interactors в папке https://github.com/igor-niv/svyatsy/tree/main/svyatsy_main/BusinessLayer они содержат код бизнес логики по обработки данных (business logic layer);
+* четырех файлов interactors в папке https://github.com/igor-niv/svyatsy/tree/main/svyatsy_main/BusinessLayer они содержат код бизнес логики по обработке данных (business logic layer);
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/models.py он содержит объектную модеь БД  (data access layer);
 * файла https://github.com/igor-niv/svyatsy/blob/main/svyatsy_main/DatabaseLayer/db_service.py он содержит простой DAO класс (data access layer);
 * папки https://github.com/igor-niv/svyatsy/tree/main/templates она содержит html шаблоны сайта.
