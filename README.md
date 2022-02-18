@@ -1,6 +1,7 @@
 # Svyatsy (Святцы)
 
 Исходный код сайта www.svyatsy.site
+
 Сайт разработан на языке Python с использованием веб-фреймворка Django.
 Проект можно открыть в PyCharm Professional Edition (нужные файлы присутствуют в репозитории).
 Сайт хостится на платформе DigitalOcean (виртуальная машина с Ubuntu 20.04 / Django 3.2 / Gunicorn 'Green Unicorn' / Nginx).
