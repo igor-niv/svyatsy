@@ -25,5 +25,5 @@
 * Сайт проиндексирован в Google и Yandex (запрос на индексацию отправлен 18 февраля, она еще может быть в процессе);
 * и т.д.
 
-Сайт проверен в Safari (macOS, iPadOS), Chrome (Windows), Microsoft Edge (Windows).
+Сайт проверен в Safari (macOS, iPadOS, iOS), Chrome (Windows), Microsoft Edge (Windows).
 
