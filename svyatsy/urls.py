@@ -34,7 +34,7 @@ urlpatterns = [
     re_path(r'^[0-9]', namesByCalendar),
     re_path(r'^search/', formSearch),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
-    path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="text/plain")),
+    path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="text/xml")),
 ]
 
 handler404 = "svyatsy_main.PresentationLayer.views.page_not_found_view"
