@@ -26,4 +26,5 @@
 * и т.д.
 
 Сайт проверен в Safari (macOS, iPadOS, iOS), Chrome (Windows), Microsoft Edge (Windows).
-Сайт проиндексирован Яндекс (доступен через строку поиска site:svyatsy.site)
+
+Сайт проиндексирован Яндекс (доступен через строку поиска site:svyatsy.site).
