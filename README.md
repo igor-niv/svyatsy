@@ -1,4 +1,4 @@
-# Svyatsy  (Святцы)
+# Svyatsy (Святцы)
 
 Исходный код сайта www.svyatsy.site
 
